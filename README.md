@@ -19,6 +19,29 @@
 
 <div align="center">
 
+<!--- Light Skills --->
+<a href="https://skillicons.dev#gh-light-mode-only" target="_blank">
+  <img align="center" src="https://skillicons.dev/icons?theme=light&perline=14&i=bash,py,nodejs,githubactions,docker,git,github,linux,nginx,vim,vscode,html,js,md" alt="Skills" />
+</a>
+<br/>
+<a href="https://skillicons.dev#gh-light-mode-only" target="_blank">
+  <img align="center" src="https://skillicons.dev/icons?theme=light&perline=14&i=c,cpp,lua,ps,regex,stackoverflow,powershell,css" alt="Skills" />
+</a>
+<!--- Dark Skills --->
+<a href="https://skillicons.dev#gh-dark-mode-only" target="_blank">
+  <img align="center" src="https://skillicons.dev/icons?perline=14&i=bash,py,nodejs,githubactions,docker,git,github,linux,nginx,vim,vscode,html,js,md" alt="Skills" />
+</a>
+<br/>
+<a href="https://skillicons.dev#gh-dark-mode-only" target="_blank">
+  <img align="center" src="https://skillicons.dev/icons?perline=14&i=c,cpp,lua,ps,regex,stackoverflow,powershell,css" alt="Skills" />
+</a>
+
+</div>
+
+<br/>
+
+<div align="center">
+
 <a href="https://github.com/MinimaxFlora/gh-action-imagebuilder"><img src="https://github-readme-stats.zohan.tech/api/pin/?username=MinimaxFlora&repo=gh-action-imagebuilder&theme=github_dark&hide_border=true&bg_color=0d1117" alt="gh-action-imagebuilder"/></a>
 <a href="https://github.com/MinimaxFlora/Extras_Paclages"><img src="https://github-readme-stats.zohan.tech/api/pin/?username=MinimaxFlora&repo=Extras_Paclages&theme=github_dark&hide_border=true&bg_color=0d1117" alt="Extras_Paclages"/></a>
 
@@ -28,7 +51,7 @@
 <br/>
 <br/>
 
-<img height="160" src="https://github-readme-stats.zohan.tech/api?username=MinimaxFlora&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&locale=cn&include_all_commits=true&hide_title=true" alt="stats"/>
+<img height="160" src="https://github-readme-stats.zohan.tech/api/top-langs/?username=MinimaxFlora&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" alt="top langs"/>
 &nbsp;
 <img height="160" src="https://streak-stats.demolab.com/?user=MinimaxFlora&theme=github-dark-blue&hide_border=true&background=0d1117" alt="streak"/>
 
