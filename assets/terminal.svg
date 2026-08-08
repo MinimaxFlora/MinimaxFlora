@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="285" viewBox="0 0 820 285" font-family="'SF Mono','Cascadia Code',Consolas,'Courier New',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#111b29"/>
+    </linearGradient>
+  </defs>
+  <rect width="820" height="285" rx="18" fill="url(#bg)" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="32" cy="30" r="7" fill="#ff5f56"/>
+  <circle cx="56" cy="30" r="7" fill="#ffbd2e"/>
+  <circle cx="80" cy="30" r="7" fill="#27c93f"/>
+  <text x="410" y="35" font-size="15" fill="#8b949e" text-anchor="middle">minimaxflora@github: ~/openwrt</text>
+  <line x1="0" y1="52" x2="820" y2="52" stroke="#21262d" stroke-width="1"/>
+
+  <text x="30" y="92" font-size="18" fill="#8b949e">$ whoami</text>
+  <text x="30" y="120" font-size="18" fill="#39d353">MinimaxFlora</text>
+  <text x="185" y="120" font-size="18" fill="#8b949e">// OpenWrt 自动化 · 固件构建 · 插件分发</text>
+
+  <text x="30" y="154" font-size="18" fill="#8b949e">$ ls -1 projects/</text>
+  <text x="30" y="182" font-size="18" fill="#79c0ff">Firmware-Build</text>
+  <text x="215" y="182" font-size="18" fill="#79c0ff">gh-action-imagebuilder</text>
+  <text x="30" y="210" font-size="18" fill="#79c0ff">Extras_Paclages</text>
+  <text x="215" y="210" font-size="18" fill="#79c0ff">action-gh-release</text>
+
+  <text x="30" y="240" font-size="18" fill="#8b949e">$ echo "让 OpenWrt 更简单，让网络更自由"</text>
+  <text x="30" y="268" font-size="18" fill="#e6edf3">让 OpenWrt 更简单，让网络更自由</text>
+</svg>
