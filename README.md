@@ -13,7 +13,7 @@
 
 ---
 
-## 🧑‍💻 About Me
+## 🧑💻 About Me
 
 > 热爱折腾 OpenWrt 路由器生态，专注把「编译固件」和「安装插件」这两件事
 > 做到**开箱即用**。相信好的工具应该让用户少操心，一键完成。
@@ -27,23 +27,29 @@
 ## 🗺️ 项目生态
 
 ```
-        ┌─────────────────────────────────────────┐
-        │            gh-action-imagebuilder        │
-        │   GitHub Action · 云端构建 OpenWrt 固件   │
-        └──────────────┬──────────────────────────┘
-                       │ 自动导入
-        ┌──────────────▼──────────────────────────┐
-        │              Extras_Paclages             │
-        │   ipk(24.x) / apk(25.x) 分支 · 按架构分类  │
-        │   x86_64 · aarch64_generic · cortex-a53  │
-        └─────────────────────────────────────────┘
+        ┌───────────────────────────────────────────┐
+        │              Firmware-Build               │
+        │        一键触发 · 参数选好点一下就跑         │
+        └───────────────┬───────────────────────────┘
+                        │ 调用
+        ┌───────────────▼───────────────────────────┐
+        │          gh-action-imagebuilder            │
+        │     GitHub Action · 云端构建 OpenWrt 固件   │
+        └───────┬───────────────────────┬───────────┘
+                │ 自动导入               │ 发布
+        ┌───────▼───────────┐   ┌───────▼───────────┐
+        │  Extras_Paclages  │   │  action-gh-release │
+        │ ipk(24)/apk(25)   │   │  Release + 产物上传│
+        │ 按架构分类存放      │   │  零依赖 · 功能对齐  │
+        └───────────────────┘   └───────────────────┘
 ```
 
 | 项目 | 说明 | 状态 |
 | :--- | :--- | :--- |
+| [**Firmware-Build**](https://github.com/MinimaxFlora/Firmware-Build) | 一键触发固件构建的工作流仓库，选好参数点一下就跑 | 🟢 活跃 |
 | [**gh-action-imagebuilder**](https://github.com/MinimaxFlora/gh-action-imagebuilder) | GitHub Action：官方源直下 ImageBuilder 构建定制固件，自动检测 24.x/25.x 最新版 | 🟢 活跃 |
 | [**Extras_Paclages**](https://github.com/MinimaxFlora/Extras_Paclages) | 第三方插件仓库：ipk/apk 分支按架构（x86_64 / aarch64_generic / aarch64_cortex-a53）直接存放插件包 | 🟢 活跃 |
-| [**Firmware-Build**](https://github.com/MinimaxFlora/Firmware-Build) | 一键触发固件构建的工作流仓库，选好参数点一下就跑 | 🟢 活跃 |
+| [**action-gh-release**](https://github.com/MinimaxFlora/action-gh-release) | GitHub Action：创建 Release 并上传产物，零依赖实现，功能对齐 softprops/action-gh-release | 🟢 活跃 |
 
 > 💡 想加新插件？往 Extras_Paclages 对应分支的架构文件夹丢一个 `.ipk` / `.apk` 就行，构建时自动带上！
 
@@ -56,7 +62,7 @@
 | 🖥️ 系统 | OpenWrt 24.10 / 25.12、Linux、Shell / Bash |
 | 🤖 自动化 | GitHub Actions、CI/CD、Composite Action |
 | 📦 打包 | opkg (ipk)、apk (OpenWrt 25.x)、makeself (兼容 .run) |
-| 🧰 工具 | ImageBuilder、Docker、Git、Python |
+| 🧰 工具 | ImageBuilder、Docker、Git、Python、Node.js |
 
 ---
 
