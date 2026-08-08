@@ -7,19 +7,42 @@
       .out { fill: #8b949e; }
       .cyan { fill: #56d4dd; }
       .dim { fill: #484f58; }
+
+      /* 18s 循环：逐行依次出现（默认可见，动画不跑时内容完整显示） */
+      @keyframes t1 { 0%,3% { width: 0; } 7% { width: 70px; } 100% { width: 70px; } }
+      @keyframes t2 { 0%,11% { width: 0; } 16% { width: 120px; } 100% { width: 120px; } }
+      @keyframes t3 { 0%,25% { width: 0; } 30% { width: 100px; } 100% { width: 100px; } }
+      @keyframes t4 { 0%,37% { width: 0; } 42% { width: 90px; } 100% { width: 90px; } }
+      @keyframes o1 { 0%,6% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o2 { 0%,10% { opacity: 0; } 14% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o3 { 0%,14% { opacity: 0; } 18% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o4 { 0%,17% { opacity: 0; } 21% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o5 { 0%,20% { opacity: 0; } 24% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o6 { 0%,23% { opacity: 0; } 27% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o7 { 0%,29% { opacity: 0; } 33% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o8 { 0%,36% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes o9 { 0%,46% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 1; } }
+      @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+      .clip1 { animation: t1 18s linear infinite; }
+      .clip2 { animation: t2 18s linear infinite; }
+      .clip3 { animation: t3 18s linear infinite; }
+      .clip4 { animation: t4 18s linear infinite; }
+      .line1 { animation: o1 18s linear infinite; }
+      .line2 { animation: o2 18s linear infinite; }
+      .line3 { animation: o3 18s linear infinite; }
+      .line4 { animation: o4 18s linear infinite; }
+      .line5 { animation: o5 18s linear infinite; }
+      .line6 { animation: o6 18s linear infinite; }
+      .line7 { animation: o7 18s linear infinite; }
+      .line8 { animation: o8 18s linear infinite; }
+      .line9 { animation: o9 18s linear infinite; }
+      .cursor { animation: blink 1.2s steps(1) infinite; }
     </style>
-    <clipPath id="c1"><rect x="195" y="56" height="22" width="0">
-      <animate attributeName="width" values="0;0;60;60" keyTimes="0;0.02;0.06;1" dur="18s" repeatCount="indefinite"/>
-    </rect></clipPath>
-    <clipPath id="c2"><rect x="195" y="114" height="22" width="0">
-      <animate attributeName="width" values="0;0;235;235" keyTimes="0;0.11;0.18;1" dur="18s" repeatCount="indefinite"/>
-    </rect></clipPath>
-    <clipPath id="c3"><rect x="195" y="238" height="22" width="0">
-      <animate attributeName="width" values="0;0;95;95" keyTimes="0;0.26;0.31;1" dur="18s" repeatCount="indefinite"/>
-    </rect></clipPath>
-    <clipPath id="c4"><rect x="195" y="296" height="22" width="0">
-      <animate attributeName="width" values="0;0;90;90" keyTimes="0;0.38;0.42;1" dur="18s" repeatCount="indefinite"/>
-    </rect></clipPath>
+    <clipPath id="c1"><rect class="clip1" x="195" y="56" height="22" width="70"/></clipPath>
+    <clipPath id="c2"><rect class="clip2" x="195" y="114" height="22" width="120"/></clipPath>
+    <clipPath id="c3"><rect class="clip3" x="195" y="238" height="22" width="100"/></clipPath>
+    <clipPath id="c4"><rect class="clip4" x="195" y="296" height="22" width="90"/></clipPath>
   </defs>
 
   <rect x="1" y="1" width="818" height="408" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
@@ -33,52 +56,29 @@
   <!-- L1 whoami -->
   <text x="24" y="72" class="t prompt">minimax@github:~$</text>
   <text x="195" y="72" class="t cmd" clip-path="url(#c1)">whoami</text>
-  <text x="24" y="96" class="t out" opacity="0">MinimaxFlora // OpenWrt 自动化 · 固件构建 · 插件分发
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.07;0.09;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="96" class="t out line1">MinimaxFlora // OpenWrt 自动化 · 固件构建 · 插件分发</text>
 
   <!-- L2 projects -->
-  <text x="24" y="130" class="t prompt" opacity="0">minimax@github:~$
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.095;0.10;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="130" class="t prompt line2">minimax@github:~$</text>
   <text x="195" y="130" class="t cmd" clip-path="url(#c2)">ls projects/</text>
-  <text x="24" y="154" class="t" opacity="0"><tspan class="cyan">gh-action-imagebuilder/</tspan><tspan class="out" dx="16">OpenWrt 固件构建 GitHub Action</tspan>
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.19;0.20;1" dur="18s" repeatCount="indefinite"/>
-  </text>
-  <text x="24" y="176" class="t" opacity="0"><tspan class="cyan">Extras_Paclages/</tspan><tspan class="out" dx="16">插件包 · ipk/apk 按架构分发</tspan>
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.20;0.21;1" dur="18s" repeatCount="indefinite"/>
-  </text>
-  <text x="24" y="198" class="t" opacity="0"><tspan class="cyan">Firmware-Build/</tspan><tspan class="out" dx="16">一键触发构建工作流</tspan>
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.21;0.22;1" dur="18s" repeatCount="indefinite"/>
-  </text>
-  <text x="24" y="220" class="t" opacity="0"><tspan class="cyan">action-gh-release/</tspan><tspan class="out" dx="16">Release 发布 Action</tspan>
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.22;0.23;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="154" class="t line3"><tspan class="cyan">gh-action-imagebuilder/</tspan><tspan class="out" dx="16">OpenWrt 固件构建 GitHub Action</tspan></text>
+  <text x="24" y="176" class="t line4"><tspan class="cyan">Extras_Paclages/</tspan><tspan class="out" dx="16">插件包 · ipk/apk 按架构分发</tspan></text>
+  <text x="24" y="198" class="t line5"><tspan class="cyan">Firmware-Build/</tspan><tspan class="out" dx="16">一键触发构建工作流</tspan></text>
+  <text x="24" y="220" class="t line6"><tspan class="cyan">action-gh-release/</tspan><tspan class="out" dx="16">Release 发布 Action</tspan></text>
 
   <!-- L3 skills -->
-  <text x="24" y="254" class="t prompt" opacity="0">minimax@github:~$
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.245;0.25;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="254" class="t prompt line7">minimax@github:~$</text>
   <text x="195" y="254" class="t cmd" clip-path="url(#c3)">ls skills/</text>
-  <text x="24" y="278" class="t out" opacity="0">bash  python  node.js  github-actions  openwrt  docker  git
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.32;0.34;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="278" class="t out line8">bash  python  node.js  github-actions  openwrt  docker  git</text>
 
   <!-- L4 motto -->
-  <text x="24" y="312" class="t prompt" opacity="0">minimax@github:~$
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.365;0.37;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="312" class="t prompt line9">minimax@github:~$</text>
   <text x="195" y="312" class="t cmd" clip-path="url(#c4)">cat motto</text>
-  <text x="24" y="336" class="t out" opacity="0">让 OpenWrt 更简单，让网络更自由
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.43;0.45;1" dur="18s" repeatCount="indefinite"/>
-  </text>
+  <text x="24" y="336" class="t out line9">让 OpenWrt 更简单，让网络更自由</text>
 
-  <!-- L5 idle prompt -->
-  <g opacity="0">
+  <!-- idle prompt + blinking cursor -->
+  <g>
     <text x="24" y="372" class="t prompt">minimax@github:~$</text>
-    <rect x="195" y="359" width="9" height="17" fill="#e6edf3">
-      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.48;0.50;1" dur="18s" repeatCount="indefinite"/>
+    <rect class="cursor" x="195" y="359" width="9" height="17" fill="#e6edf3"/>
   </g>
 </svg>
