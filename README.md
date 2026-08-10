@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦞 MinimaxFlora
+# MinimaxFlora
 
 ### OpenWrt 固件构建 · 订阅转换 · AI Agent 技能
 
@@ -206,6 +206,6 @@
 
 <br/>
 
-<sub>🦞 保持热爱，持续折腾 — MinimaxFlora</sub>
+<sub>保持热爱，持续折腾 — MinimaxFlora</sub>
 
 </div>
